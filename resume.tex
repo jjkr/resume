@@ -1,0 +1,189 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[11pt,letterpaper]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Joe Kramer}}
+
+\vspace{0.8em}
+
+1845 18th St \#2\ \ \textbullet
+%\ \ Suite\ 1001\ \ \textbullet
+\ \ Boulder, CO 80302
+\\
+(303) 335-9869\ \ \textbullet
+\ \ joe.kramer.cu@gmail.com
+\end{center}
+
+%\hrule
+%\vspace{-0.4em}
+%\subsection*{Overview}
+%Software Engineer with 7 years experience in a broad range of roles and technologies. Expert in \CPP \  and Linux. Highly motivated with a passion for building robust, performant, high quality software.
+
+\vspace{0.8em}
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Spectra Logic}}
+		{\textbf{Boulder, CO}}
+	\\
+	\headerrow
+		{\emph{Software Engineer II}}
+		{\emph{01/2011 -- 09/2012, 03/2014 -- Present}}
+	\begin{itemize*}
+		\item Developed software for a highly fault-tolerant robotics system.
+		\item Designed and implemented the resource manager for multiple robots sharing a single rack and pinion gear track.
+		\item Worked on a multitude of failure recovery scenarios to ensure maximum uptime.
+		\item Programmed primarily in \CPP \ on an embedded Linux platform. Also programmed in Java for the simulation environment and Ruby and Javascript for a web application.
+		\item Team used Agile Scrum development methodology including extensive unit testing, code reviews, and CI to rapidly ship quality software.
+		\item Wrote a physical simulation environment for integration testing of the robotics system.
+        \item Worked with a team to design and implement a new web interface to the tape library. The front end was a backbone.js based single page application backed by a Ruby on Rails app server and a Postgresql database.
+	\end{itemize*}
+
+    {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	    {\emph{Field Engineer}} \\
+    \end{tabular*}}
+	\begin{itemize*}
+		\item Traveled to customer sites to perform installations and provide on site support in the early stages of the product launch.
+        \item Our customers ran some of the largest data centers in the world including The Genome Project, Bluewaters supercomputer, NASA, LLNL, Argon National Labs, and SBS and KMA TV stations in Seoul, Korea.
+		\item Solved technical problems and managed customer expectations in high pressure situations.
+		\item Wrote software part time on tools for sending SCSI commands and updating firmware on various library components.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Audioair}}
+		{\textbf{Durango, CO}}
+	\\
+	\headerrow
+		{\emph{Engineer}}
+		{\emph{11/2012 -- 02/2014}}
+	\begin{itemize*}
+		\item First engineering hire at a startup. The company sold a system where people can listen to muted televisions with their phones in places like sports bars, health clubs, and casinos. The company raised over \$4m in funding.
+		\item Programmed firmware for boards to digitize audio and transmit it over WiFi networks. Also tuned WiFi access points to optimize for streaming audio traffic and minimize latency.
+		\item Streamlined the site survey and installation process.
+        \item Wrote software for a LAMP server that showed locations where the product was available and what was playing on the televisions in each location.
+        \item Developed Android and iOS apps to connect to Audioair networks, select channels, and receive audio in real time.
+        \item Interfaced with a hardware design firm to specify an audio digitizer and transmitter box.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Emulex Corp.}}
+		{\textbf{Longmont, CO}}
+	\\
+	\headerrow
+		{\emph{Software Engineer}}
+		{\emph{05/2009 -- 12/2010}}
+	\begin{itemize*}
+		\item Worked on proof of concept project with IBM to manage encryption keys for enterprise SAN networks.
+		\item Encryption was done in hardware on Host Bus Adapters made by Emulex. I worked on mid and low level SCSI drivers to handle encryption keys. The low level driver is included in the Linux kernel.
+		\item Developed the packaging and deployment of software to support encrypting HBAs. Supported rpm packages for Red Hat Linux and a Windows install wizard.
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Level 3 Communications}}
+		{\textbf{Broomfield, CO}}
+	\\
+	\headerrow
+		{\emph{Web Programming Intern}}
+		{\emph{05/2008 -- 01/2009}}
+	\begin{itemize*}
+		\item Worked on a Java EE web application to manage VOIP routing.
+		\item Wrote a command line tool to handle batch changes to the VOIP network. This tool provisioned millions of phone numbers including some of the first Google Voice numbers.
+	\end{itemize*}
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item 
+	\headerrow
+		{\textbf{University of Colorado}}
+		{\textbf{Boulder, CO}}
+	\\
+	\headerrow
+		{\emph{B.S. Electrical and Computer Engineering, GPA 3.7}}
+		{\emph{2007 -- 2010}}
+	\begin{itemize*}
+		\item Relevant coursework in Circuits, Data Structures, Compilers, Operating Systems, Computer Organization, Digital Logic, UNIX System Admin, and Digital Signal Processing.
+		\item Senior project in real time polyphonic musical note recognition. Custom PCB ran FFT based signal processing on an FPGA and AI algorithms on a ARM CPU to transform an analog audio signal into MIDI note information.
+	\end{itemize*}
+
+\end{itemize}
+
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Languages:]
+	C, \CPP, Java, Ruby, Python, Lua, Scala, Bash, PHP, HTML, CSS, JavaScript, CoffeeScript, SQL,Objective-C, MATLAB, Verilog, \LaTeX
+    \vspace{0.4em}
+	\item[Technologies:]
+	Linux, Boost, PostgreSQL, MySQL, Android, iOS, jQuery, Robotics, SCSI, VOIP, Fibre Channel, J2EE, JPA, Audio Codecs(MP3, CELT, SILK, Opus), git, Perforce, Subversion, XML, JSON, REST, CAN
+\end{description*}
+
+
+\vspace{0.6em}
+\hrule
+\vspace{0.4em}
+References available upon request
+\end{indentsection}
+
+\end{document}
