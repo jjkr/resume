@@ -47,9 +47,9 @@
 
 \vspace{0.8em}
 
-1845 18th St \#2\ \ \textbullet
+3250 O'Neal Cir D22\ \ \textbullet
 %\ \ Suite\ 1001\ \ \textbullet
-\ \ Boulder, CO 80302
+\ \ Boulder, CO 80301
 \\
 (303) 335-9869\ \ \textbullet
 \ \ joe.kramer.cu@gmail.com
@@ -58,7 +58,7 @@
 %\hrule
 %\vspace{-0.4em}
 %\subsection*{Overview}
-%Software Engineer with 7 years experience in a broad range of roles and technologies. Expert in \CPP \  and Linux. Highly motivated with a passion for building robust, performant, high quality software.
+%Software Engineer with over 10 years experience building web and systems software. Highly motivated to create great products.
 
 \vspace{0.8em}
 \hrule
@@ -67,6 +67,24 @@
 
 \begin{itemize}
 	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{JumpCloud}}
+		{\textbf{Boulder, CO}}
+	\\
+	\headerrow
+		{\emph{Software Engineer}}
+		{\emph{06/2018 -- Present}}
+	\begin{itemize*}
+		\item Backend and systems development primarily in Go to provide a cloud based directory service.
+        \item Implemented core user, group, and password management functionality on MacOS to securely provision users on systems and manage their credentials.
+        \item Updated systems server endpoints to support Multi Factor Authentication using TOTP.
+        \item Lead large refactor effort to get unit tests in place while releasing often.
+        \item Designed next generation of systems management microservice.
+        \item Gave Lunch and Learn talk on Operating Systems History.
+        \item Reverse engineering of MacOS security functionality including SecureToken, OpenDirectory, APFS encryption, and T2 chips.
+	\end{itemize*}
 
 	\item
 	\headerrow
@@ -87,13 +105,12 @@
 	\end{itemize*}
 
     {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-	    {\emph{Field Engineer}} \\
+	    {\emph{Support Engineer}} \\
     \end{tabular*}}
 	\begin{itemize*}
-		\item Traveled to customer sites to perform installations and provide on site support in the early stages of the product launch.
+		\item Traveled to customer sites around the world to troubleshoot critical production issues in large datacenters.
         \item Our customers ran some of the largest data centers in the world including The Genome Project, Bluewaters supercomputer, NASA, LLNL, Argon National Labs, and SBS and KMA TV stations in Seoul, Korea.
 		\item Solved technical problems and managed customer expectations in high pressure situations.
-		\item Wrote software part time on tools for sending SCSI commands and updating firmware on various library components.
 	\end{itemize*}
 
 	\item
@@ -102,15 +119,15 @@
 		{\textbf{Durango, CO}}
 	\\
 	\headerrow
-		{\emph{Engineer}}
+		{\emph{Software Engineer}}
 		{\emph{11/2012 -- 02/2014}}
 	\begin{itemize*}
-		\item First engineering hire at a startup. The company sold a system where people can listen to muted televisions with their phones in places like sports bars, health clubs, and casinos. The company raised over \$4m in funding.
-		\item Programmed firmware for boards to digitize audio and transmit it over WiFi networks. Also tuned WiFi access points to optimize for streaming audio traffic and minimize latency.
+		\item First engineering hire at a startup. The company sold a product which allowed people to listen to muted televisions with their phones in places like sports bars, health clubs, and casinos.
+		\item Development in C, C++, Objective C, Java, Ruby, Bash doing web, app, and embedded work.
+		\item Redesigned audio transmission scheme to drastically improve latency in real world scenarios, mostly due to switching from multicast to unicast on 802.11.
+        \item Designed and implemented live updating of currently playing channel in the app and on the website.
+		\item Tuned WiFi access point configuration to optimize for streaming audio traffic and minimize latency.
 		\item Streamlined the site survey and installation process.
-        \item Wrote software for a LAMP server that showed locations where the product was available and what was playing on the televisions in each location.
-        \item Developed Android and iOS apps to connect to Audioair networks, select channels, and receive audio in real time.
-        \item Interfaced with a hardware design firm to specify an audio digitizer and transmitter box.
 	\end{itemize*}
 
 	\item
@@ -122,9 +139,10 @@
 		{\emph{Security Engineering Intern}}
 		{\emph{05/2009 -- 12/2010}}
 	\begin{itemize*}
-		\item Worked on proof of concept project with IBM to manage encryption keys for enterprise SAN networks.
-		\item Encryption was done in hardware on Host Bus Adapters made by Emulex. I worked on mid and low level SCSI drivers to handle encryption keys. The low level driver is included in the Linux kernel.
-		\item Developed the packaging and deployment of software to support encrypting HBAs. Supported rpm packages for Red Hat Linux and a Windows install wizard.
+		\item Developed software for key management on encrypting Host Bus Adapter project in C, C++, and Java.
+		\item Designed and implemented a packaging system to distribute HBA key management software, including proprietary encryption drivers, on Linux and Windows.
+		\item Implemented bug fixes in Windows and Linux kernel code, including changes that were merged into the Linux kernel.
+		\item Developed Java software to integrate IBM's TKLM key server with Emulex HBAs for encrypting data on Storage Area Networks.
 	\end{itemize*}
 
 	\item
@@ -136,7 +154,7 @@
 		{\emph{Web Programming Intern}}
 		{\emph{05/2008 -- 01/2009}}
 	\begin{itemize*}
-		\item Full stack development on Java EE web application to manage VOIP routing.
+		\item Full stack web development on Java EE web application to manage VOIP routing.
 		\item Wrote a command line tool to process large batches of changes to the VOIP network. This tool provisioned millions of phone numbers including some of the first Google Voice numbers.
 	\end{itemize*}
 \end{itemize}
@@ -173,10 +191,10 @@
 \hyphenpenalty=1000
 \begin{description*}
 	\item[Languages:]
-	C, \CPP, Java, Ruby, Python, Lua, Scala, Bash, PHP, HTML, CSS, JavaScript, CoffeeScript, SQL,Objective-C, MATLAB, Verilog, \LaTeX
+	\CPP, Go, C, Objective C, Java, Bash, Python, Ruby, Scala, HTML, CSS, JavaScript, MATLAB, \LaTeX
     \vspace{0.4em}
 	\item[Technologies:]
-	Linux, Boost, PostgreSQL, MySQL, Android, iOS, jQuery, Robotics, SCSI, VOIP, Fibre Channel, J2EE, JPA, Audio Codecs(MP3, CELT, SILK, Opus), git, Perforce, Subversion, XML, JSON, REST, CAN
+	Linux, Windows, MacOS, git, PostgreSQL, MongoDB, gRPC, REST, AWS, iOS, Android, Docker, Embedded, ARM, SCSI, Fibre Channel, Perforce, Subversion, XML, JSON, CAN
 \end{description*}
 
 
