@@ -2,7 +2,7 @@
 % vim:set ft=tex spell:
 
 \documentclass[11pt,letterpaper]{article}
-\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[letterpaper,margin=0.8in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{mdwlist}
 \usepackage[T1]{fontenc}
@@ -10,6 +10,7 @@
 \usepackage{tgpagella}
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
+\hyphenpenalty=1000
 
 % indentsection style, used for sections that aren't already in lists
 % that need indentation to the level of all text in the document
@@ -55,14 +56,14 @@
 \ \ joe.kramer.cu@gmail.com
 \end{center}
 
-%\hrule
-%\vspace{-0.4em}
-%\subsection*{Overview}
-%Software Engineer with over 10 years experience building web and systems software. Highly motivated to create great products.
-
-\vspace{0.8em}
 \hrule
 \vspace{-0.4em}
+\subsection*{Overview}
+Software Engineer with over 10 years experience crafting high quality web, systems, and app software. Intensely curious and highly motivated to deliver great products.
+
+%\vspace{0.8em}
+%\hrule
+%\vspace{-0.4em}
 \subsection*{Experience}
 
 \begin{itemize}
@@ -77,11 +78,11 @@
 		{\emph{Software Engineer}}
 		{\emph{06/2018 -- Present}}
 	\begin{itemize*}
-		\item Backend and systems development primarily in Go to provide a cloud based directory service.
-        \item Implemented core user, group, and password management functionality on MacOS to securely provision users on systems and manage their credentials.
-        \item Updated systems server endpoints to support Multi Factor Authentication using TOTP.
-        \item Lead large refactor effort to get unit tests in place while releasing often.
-        \item Designed next generation of systems management microservice.
+		\item Backend and systems development primarily in Go for a cloud based directory service.
+        \item Designed and implemented MacOS user, group, and password management functionality to securely manage devices and identities for businesses.
+        \item Updated server endpoints to support Multi Factor Authentication on systems.
+        \item Added static and dynamic analysis to CI pipeline, finding and fixing several security holes in the process.
+        \item Designed new microservice for device management and produced high level architecture documentation.
         \item Gave Lunch and Learn talk on Operating Systems History.
         \item Reverse engineering of MacOS security functionality including SecureToken, OpenDirectory, APFS encryption, and T2 chips.
 	\end{itemize*}
@@ -95,13 +96,15 @@
 		{\emph{Software Engineer II}}
 		{\emph{01/2011 -- 09/2012, 03/2014 -- 06/2018}}
 	\begin{itemize*}
-		\item Developed software for a highly fault-tolerant robotics system.
-		\item Designed and implemented the resource manager for multiple robots sharing a single rack and pinion gear track.
-		\item Worked on a multitude of failure recovery scenarios to ensure maximum uptime.
-		\item Programmed primarily in \CPP \ on an embedded Linux platform. Also programmed in Java for the simulation environment and Ruby and Javascript for a web application.
-		\item Team used Agile Scrum development methodology including extensive unit testing, code reviews, and CI to rapidly ship quality software.
-		\item Wrote a physical simulation environment for integration testing of the robotics system.
-        \item Worked with a team to design and implement a new web interface to the tape library. The front end was a backbone.js based single page application backed by a Ruby on Rails app server and a Postgresql database.
+		\item Development primarily in \CPP \ for enterprise tape libraries.
+		\item Designed and implemented concurrent access control for multiple robots sharing a single rack and pinion gear track.
+		\item Designed and implemented structured event logging system to record events in a sqlite database and collect those databases.
+		\item Lead a project to centralize logging and improve resiliency of robotics systems using a data based approach. Was able to achieve over 50\% reduction in overall failure rates. Text based logs were stored in ElasticSearch and structured logs and calibration data were stored in PostgreSQL. A Python Flask API server was used to access structured data and a React based frontend was made available to support to aid in troubleshooting.
+		\item Wrote XML Schema Definition to formalize contract between teams.
+        \item Worked with a team to design and implement a new web interface to the tape library using Ruby on Rails and PostgreSQL.
+		\item Implemented collision detection in Java based physical simulation environment for rapid testing of the robotics system.
+		\item Implemented real-time robotics control software on bare metal ARM Cortex-M processor.
+		\item Wrote JavaScript ES6 based test harness for robotics, initially to speed up my own bench testing. This was later adapted for high level acceptance testing.
 	\end{itemize*}
 
     {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
@@ -109,8 +112,7 @@
     \end{tabular*}}
 	\begin{itemize*}
 		\item Traveled to customer sites around the world to troubleshoot critical production issues in large datacenters.
-        \item Our customers ran some of the largest data centers in the world including The Genome Project, Bluewaters supercomputer, NASA, LLNL, Argon National Labs, and SBS and KMA TV stations in Seoul, Korea.
-		\item Solved technical problems and managed customer expectations in high pressure situations.
+		\item Solved complex performance issues for FreeBSD and ZFS based Network Attached Storage product. Implemented small features and bugfixes with high customer value.
 	\end{itemize*}
 
 	\item
@@ -123,8 +125,8 @@
 		{\emph{11/2012 -- 02/2014}}
 	\begin{itemize*}
 		\item First engineering hire at a startup. The company sold a product which allowed people to listen to muted televisions with their phones in places like sports bars, health clubs, and casinos.
-		\item Development in C, C++, Objective C, Java, Ruby, Bash doing web, app, and embedded work.
-		\item Redesigned audio transmission scheme to drastically improve latency in real world scenarios, mostly due to switching from multicast to unicast on 802.11.
+		\item App development on Android and iOS using Java, Ojective-C, and a shared core in \CPP.
+		\item Redesigned audio transmission scheme to drastically improve latency in real world scenarios.
         \item Designed and implemented live updating of currently playing channel in the app and on the website.
 		\item Tuned WiFi access point configuration to optimize for streaming audio traffic and minimize latency.
 		\item Streamlined the site survey and installation process.
@@ -139,7 +141,7 @@
 		{\emph{Security Engineering Intern}}
 		{\emph{05/2009 -- 12/2010}}
 	\begin{itemize*}
-		\item Developed software for key management on encrypting Host Bus Adapter project in C, C++, and Java.
+		\item Developed software for key management on encrypting Host Bus Adapter project in C, \CPP, and Java.
 		\item Designed and implemented a packaging system to distribute HBA key management software, including proprietary encryption drivers, on Linux and Windows.
 		\item Implemented bug fixes in Windows and Linux kernel code, including changes that were merged into the Linux kernel.
 		\item Developed Java software to integrate IBM's TKLM key server with Emulex HBAs for encrypting data on Storage Area Networks.
@@ -160,7 +162,7 @@
 \end{itemize}
 
 
-\hrule
+%\hrule
 \vspace{-0.4em}
 \subsection*{Education}
 
@@ -173,28 +175,28 @@
 		{\textbf{Boulder, CO}}
 	\\
 	\headerrow
-		{\emph{B.S. Electrical and Computer Engineering, GPA 3.7}}
-		{\emph{2007 -- 2010}}
+		{\emph{B.S. Electrical and Computer Engineering}}
+		{\emph{2010}}
 	\begin{itemize*}
 		\item Relevant coursework in Circuits, Data Structures, Compilers, Operating Systems, Computer Organization, Digital Logic, UNIX System Admin, and Digital Signal Processing.
-		\item Senior project in real time polyphonic musical note recognition. Custom PCB ran FFT based signal processing on an FPGA and AI algorithms on a ARM CPU to transform an analog audio signal into MIDI note information.
+		%\item Senior project in real time polyphonic musical note recognition. Custom PCB ran FFT based signal processing on an FPGA and AI algorithms on a ARM CPU to transform an analog audio signal into MIDI note information.
 	\end{itemize*}
 
 \end{itemize}
 
 
-\hrule
+%\hrule
 \vspace{-0.4em}
-\subsection*{Core Technical Skills}
+\subsection*{Technical Skills}
 
 \begin{indentsection}{\parindent}
 \hyphenpenalty=1000
 \begin{description*}
 	\item[Languages:]
-	\CPP, Go, C, Objective C, Java, Bash, Python, Ruby, Scala, HTML, CSS, JavaScript, MATLAB, \LaTeX
+	\CPP, Go, C, Objective-C, Java, Bash, Python, Ruby, Scala, HTML, CSS, JavaScript
     \vspace{0.4em}
 	\item[Technologies:]
-	Linux, Windows, MacOS, git, PostgreSQL, MongoDB, gRPC, REST, AWS, iOS, Android, Docker, Embedded, ARM, SCSI, Fibre Channel, Perforce, Subversion, XML, JSON, CAN
+	Linux, Windows, MacOS, git, PostgreSQL, MongoDB, gRPC, REST, AWS, iOS, Android, Docker, ARM, SCSI, Fibre Channel, Perforce, Subversion, XML, JSON, CAN, Agile, CI
 \end{description*}
 
 
